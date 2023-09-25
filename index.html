@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting Animation</title>
+    <style>
+        body {
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .handwriting {
+            display: inline-flex;
+            align-items: center;
+            font-size: 24px;
+            animation: handwriting-animation 5s linear forwards;
+        }
+
+        @keyframes handwriting-animation {
+            0% {
+                width: 0;
+                opacity: 0;
+            }
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        img {
+            width: 24px; /* Adjust the size of your pen icon as needed */
+            margin-right: 10px; /* Adjust the spacing between the icon and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="handwriting">
+            <img src="pen-icon.png" alt="Hand holding a pen">
+            <span>Hello I'm A Coder.</span>
+        </div>
+    </div>
+</body>
+</html>
+

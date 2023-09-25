@@ -30,6 +30,19 @@
             }
         }
     </style>
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable F12 and Ctrl+Shift+I for developer tools
+        document.onkeydown = function (e) {
+            if (e.ctrlKey && (e.keyCode === 73 || e.keyCode === 74)) {
+                return false;
+            }
+        };
+    </script>
     <title>Animated Cursive Text</title>
 </head>
 <body>

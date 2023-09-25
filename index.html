@@ -13,6 +13,7 @@
     .hand-icon {
       font-size: 24px;
       /* Use the pen icon 🖊️ here, you might need to adjust the font or import an icon library */
+      animation: handAnimation 4s infinite linear;
     }
 
     .text {
@@ -21,16 +22,25 @@
       white-space: nowrap; /* Prevent text from wrapping */
       overflow: hidden; /* Hide overflow text */
       width: 0; /* Start with zero width */
-      animation: typeWriter 4s steps(100, end) infinite linear; /* Smoother animation with linear timing */
+      animation: textAnimation 4s steps(100, end) infinite linear; /* Smoother animation with linear timing */
 
       /* Optional styling for the text */
       color: #333;
       padding-left: 10px; /* Space between icon and text */
     }
 
-    @keyframes typeWriter {
+    @keyframes textAnimation {
       to {
         width: 100%; /* Fully reveal the text */
+      }
+    }
+
+    @keyframes handAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
       }
     }
   </style>

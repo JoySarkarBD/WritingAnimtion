@@ -13,61 +13,30 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
-
-        .animation-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .pen-emoji {
-            font-size: 30px; /* Adjust the emoji size as needed */
-            animation: penAnimation 2s ease-in-out forwards;
+            overflow: hidden;
         }
 
         .animated-text {
-            display: flex;
             font-size: 24px; /* Adjust the font size as needed */
-            align-items: center;
             opacity: 0;
-            animation: textAnimation 2s ease-in-out forwards 0.5s;
-        }
-
-        .coder-text {
-            font-weight: bold; /* Add styling to the "Coder" text if needed */
-        }
-
-        @keyframes penAnimation {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            white-space: nowrap;
+            animation: textAnimation 5s steps(40, end) forwards;
         }
 
         @keyframes textAnimation {
             0% {
-                transform: translateY(-20px);
-                opacity: 0;
+                width: 0;
             }
             100% {
-                transform: translateY(0);
+                width: 100%;
                 opacity: 1;
             }
         }
     </style>
 </head>
 <body>
-    <div class="animation-container">
-        <div class="pen-emoji">🖊️</div> <!-- Use the 🖊️ emoji here -->
-        <div class="animated-text">
-            <span>Hello</span>
-            <span>I'm</span>
-            <span class="coder-text">A Coder.</span>
-        </div>
+    <div class="animated-text">
+        Hello I'm A Coder.
     </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,8 +11,8 @@
     }
 
     .hand-icon {
-      /* Style your hand holding a pen icon here */
-      /* You might need to use an <img> or an <svg> for the icon */
+      font-size: 24px;
+      /* Use the pen icon 🖊️ here, you might need to adjust the font or import an icon library */
     }
 
     .text {
@@ -21,7 +21,7 @@
       white-space: nowrap; /* Prevent text from wrapping */
       overflow: hidden; /* Hide overflow text */
       width: 0; /* Start with zero width */
-      animation: typeWriter 4s steps(30, end) infinite; /* Animation duration and steps */
+      animation: typeWriter 4s steps(100, end) infinite linear; /* Smoother animation with linear timing */
 
       /* Optional styling for the text */
       color: #333;
@@ -38,15 +38,11 @@
 <body>
   <div class="animation-container">
     <div class="hand-icon">
-      <!-- Add your hand holding a pen icon here -->
+      🖊️ <!-- You can replace this with the actual icon code or font icon -->
     </div>
     <div class="text">
       Hello, I'm a Coder.
     </div>
   </div>
-
-  <script>
-    // JavaScript code can go here for any interactivity or further customization
-  </script>
 </body>
 </html>

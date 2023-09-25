@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursive Animation</title>
     <style>
         body {
-            font-family: cursive; /* Set your cursive font here */
-            background-color: #f0f0f0; /* Set your desired background color */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
+            background-color: #f0f0f0;
         }
 
-        .animated-text {
-            font-size: 24px; /* Adjust the font size as needed */
-            opacity: 0;
+        .text p {
+            font-family: 'cursive';
+            font-size: 24px;
             white-space: nowrap;
+            overflow: hidden;
             animation: textAnimation 5s steps(40, end) forwards;
         }
 
@@ -29,14 +27,14 @@
             }
             100% {
                 width: 100%;
-                opacity: 1;
             }
         }
     </style>
+    <title>Animated Cursive Text</title>
 </head>
 <body>
-    <div class="animated-text">
-        Hello I'm A Coder.
+    <div class="text">
+        <p>Hello I'm A Coder</p>
     </div>
 </body>
 </html>
